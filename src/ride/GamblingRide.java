@@ -1,0 +1,5 @@
+package ride;
+
+interface GamblingRide{
+    
+}
