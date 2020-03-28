@@ -1,8 +1,8 @@
 package ride;
 
 public class Ladderklimmen extends Ride implements GamblingRide{
-    public Ladderklimmen(){
-        super("Ladderklimmen");
+    public Ladderklimmen(String name){
+        super(name);
         this.setPrice(5.00);
     }
 }

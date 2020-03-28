@@ -1,8 +1,8 @@
 package ride;
 
 public class Spin extends HighRiskRide{
-    public Spin(){
-        super("Spin");
+    public Spin(String name){
+        super(name);
         this.setPrice(2.25);
     }
 }
