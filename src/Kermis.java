@@ -5,6 +5,7 @@ class Kermis{
     public static final String defaultOptions = "" +
         " [o]\tRevenue (Omzet)\n" +
         " [k]\tNumber of tickets sold (Kaartjes)\n" +
+        " [m]\tMaintenance\n" + 
         " [q]\tQuit\n";
     
     private boolean running = true;
@@ -45,11 +46,16 @@ class Kermis{
             }
         }
         else if (choice.equals("o")){
+            this.reg.displayTotalRevenue();
             this.dispM = DisplayMode.REVENUE;
             validInput = true;
         }
         else if (choice.equals("k")){
             this.dispM = DisplayMode.TICKETSSOLD;
+            validInput = true;
+        }
+        else if (choice.equals("m")){
+            this.reg.maintainRides();
             validInput = true;
         }
         else if (choice.equals("q")){
@@ -83,10 +89,10 @@ class Kermis{
         Kermis kermis = new Kermis();
         
         kermis.reg.addRide(new Botsautos("Botsautos"));
-        kermis.reg.addRide(new Spin("Spin\t"));
+        kermis.reg.addRide(new Spin("Spin"));
         kermis.reg.addRide(new Spiegelpaleis("Spiegelpaleis"));
         kermis.reg.addRide(new Spookhuis("Spookhuis"));
-        kermis.reg.addRide(new Hawaii("Hawaii\t"));
+        kermis.reg.addRide(new Hawaii("Hawaii"));
         kermis.reg.addRide(new Ladderklimmen("Ladderklimmen"));
         
         kermis.run();
