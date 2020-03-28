@@ -16,15 +16,20 @@ public abstract class Ride{
         this.price = newPrice;
     }
     
+    public double getRevenue(){
+        return this.revenue;
+    }
+    public int getTicketsSold(){
+        return this.ticketsSold;
+    }
     public void executeRide(){
         System.out.println("Ride '" + this.name + "' is running");
         this.ticketsSold++;
         this.revenue += this.price;
     }
     
-    public String displayInfo(){
-        String disp = name + ", \t\trevenue: " + revenue;
-        System.out.println(disp);
+    public String toString(){
+        String disp = this.name;
         return disp;
     }
 }

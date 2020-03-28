@@ -1,8 +1,8 @@
 package ride;
 
 public class Hawaii extends HighRiskRide{
-    public Hawaii(){
-        super("Hawaii");
+    public Hawaii(String name){
+        super(name);
         this.setPrice(2.90);
     }
 }
